@@ -55,10 +55,13 @@ Ext.define('SenchaPro.view.main.Profile', {
                     bind:{
                         value: '{genderComboValue}',
                     },
+                    editable: false,
                     displayField: 'label',
                     valueField: 'value'
                 },{
-                    fieldLabel: 'Date of Birth'
+                    fieldLabel: 'Date of Birth',
+                    xtype: 'datefield',
+                    format: 'm-d-Y'
                 },{
                     fieldLabel: 'E-mail'
                 },{
