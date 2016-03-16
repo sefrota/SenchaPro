@@ -80,7 +80,15 @@ Ext.define('SenchaPro.view.main.Main', {
         iconCls: 'fa-home',
         // The following grid shares a store with the classic version's grid as well!
         items: [{
-            xtype: 'mainlist'
+            xtype: 'maincontainer',
+            items:[{
+                xtype:'mainlist',
+                region: 'center',
+                margin: '0 5 0 0'
+            },{
+                xtype:'profile',
+                region: 'east'
+            }]
         }]
     }, {
         title: 'Users',
