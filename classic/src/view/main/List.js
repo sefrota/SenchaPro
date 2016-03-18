@@ -16,9 +16,10 @@ Ext.define('SenchaPro.view.main.List', {
     },
 
     columns: [
-        { text: 'Name',  dataIndex: 'name' },
-        { text: 'Email', dataIndex: 'email', flex: 1 },
-        { text: 'Phone', dataIndex: 'phone', flex: 1 }
+        { text: 'First Name',  dataIndex: 'firstName', flex:1},
+        { text: 'Last Name',  dataIndex: 'lastName', flex:1},
+        { text: 'Email', dataIndex: 'email', flex:1},
+        { text: 'Phone', dataIndex: 'phone', flex:1}
     ],
 
     listeners: {

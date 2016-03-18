@@ -10,12 +10,14 @@ Ext.define('SenchaPro.view.main.MainController', {
     alias: 'controller.main',
 
     onItemSelected: function (sender, record) {
-        Ext.Msg.confirm('Confirm', 'Are you sure?', 'onConfirm', this);
+        var me = this;
+        var profilePanel = me.lookupReference('profile');
+        profilePanel.getForm().loadRecord(record);
     },
 
-    onConfirm: function (choice) {
-        if (choice === 'yes') {
-            //
-        }
-    }
+    //onConfirm: function (choice) {
+    //    if (choice === 'yes') {
+    //        //
+    //    }
+    //}
 });

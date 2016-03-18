@@ -4,7 +4,6 @@
 Ext.define('SenchaPro.view.main.Profile', {
     extend: 'Ext.FormPanel',
     xtype:'profile',
-
     requires: [
         'Ext.button.Button',
         'Ext.form.FieldSet',
@@ -12,13 +11,16 @@ Ext.define('SenchaPro.view.main.Profile', {
         'Ext.layout.container.VBox',
         'SenchaPro.store.Gender'
     ],
-
+    reference: 'profile',
     layout:{type:'vbox',align: 'middle'},
+    title: "Profile",
+
     items: [
         {
             xtype:'image',
             height: 200,
             width:200,
+            margin: 5,
             //TODO: dinamically encapsulate this path
             bind: {
                 src: '/resources/{genderComboValue}-profile.png'
@@ -30,9 +32,12 @@ Ext.define('SenchaPro.view.main.Profile', {
             title: 'Account details',
             items:[
                 {
-                    fieldLabel: 'Username'
+                    fieldLabel: 'Username',
+                    name: 'username'
                 },{
-                    fieldLabel: 'Password'
+                    fieldLabel: 'Password',
+                    name: 'password',
+                    inputType: 'password'
                 },{
                     fieldLabel: 'Confirm Password'
                 }
@@ -44,32 +49,40 @@ Ext.define('SenchaPro.view.main.Profile', {
             title: 'Personal details',
             items:[
                 {
-                    fieldLabel: 'First Name'
+                    fieldLabel: 'First Name',
+                    name: 'firstName'
                 },{
-                    fieldLabel: 'Last Name'
+                    fieldLabel: 'Last Name',
+                    name: 'lastName'
                 },{
                     fieldLabel: 'Gender',
+                    name: 'gender',
                     xtype: 'combobox',
                     reference: 'genderCombo',
                     store: {type: 'genders'},
                     bind:{
-                        value: '{genderComboValue}',
+                        value: '{genderComboValue}'
                     },
                     editable: false,
                     displayField: 'label',
                     valueField: 'value'
                 },{
                     fieldLabel: 'Date of Birth',
+                    name:'dateOfBirth',
                     xtype: 'datefield',
                     format: 'm-d-Y'
                 },{
-                    fieldLabel: 'E-mail'
+                    fieldLabel: 'E-mail',
+                    name: 'email'
                 },{
-                    fieldLabel: 'Address'
+                    fieldLabel: 'Address',
+                    name: 'address'
                 },{
-                    fieldLabel: 'Phone no.'
+                    fieldLabel: 'Phone no.',
+                    name: 'phone'
                 },{
-                    fieldLabel: 'Country'
+                    fieldLabel: 'Country',
+                    name: 'country'
                 }
             ]
         },{

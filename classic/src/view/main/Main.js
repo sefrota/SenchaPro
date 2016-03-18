@@ -87,7 +87,8 @@ Ext.define('SenchaPro.view.main.Main', {
                 margin: '0 5 0 0'
             },{
                 xtype:'profile',
-                region: 'east'
+                region: 'east',
+                collapsible: true
             }]
         }]
     }, {
