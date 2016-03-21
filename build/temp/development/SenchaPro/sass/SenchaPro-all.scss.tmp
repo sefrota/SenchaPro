@@ -1,5 +1,5 @@
 $app-name:  dynamic( 'SenchaPro' );
-$image-search-path: 'C:/Users/sletras/IdeaProjects/SenchaPro/build/development/SenchaPro/classic/resources';
+$image-search-path: '/Users/sergioletras/SenchaPro/build/development/SenchaPro/classic/resources';
 $theme-name:  dynamic( 'theme-triton' );
 $include-ext-abstractcomponent: dynamic(true);;
 $include-ext-abstractcontainer: dynamic(true);;

@@ -24,6 +24,9 @@ public class HomeController {
         usersData.add(new User(1, "tonyt", "monkey", "Anthony", "Trinity", "Male",
         "1981-05-23", "tonyt@gmail.com", "Main Street", "92525555-22", "England"));
         users.put("users", usersData);
+        usersData.add(new User(2, "hyunsuks", "monkey", "Hyunsuk", "Park", "Female",
+                "1988-08-10", "wise_innocent@hotmail.com", "Main Street", "92525555-22", "Korea"));
+        users.put("users", usersData);
         return users;
     }
 }

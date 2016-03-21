@@ -4,12 +4,49 @@
 Ext.define('SenchaPro.view.main.List', {
     extend: 'Ext.grid.Panel',
     xtype: 'mainlist',
-
+    reference: 'mainlist',
     requires: [
         'SenchaPro.store.Personnel'
     ],
 
     title: 'Personnel',
+    header: {
+        items: [
+            {
+                xtype: 'button',
+                text: 'New',
+                formBind: true,
+                margin: '5',
+                listeners:{
+                    click: 'addUser'
+                }
+            },{
+                xtype: 'button',
+                text: 'Delete',
+                formBind: true,
+                margin: '5',
+                listeners: {
+                    click: 'removeUser'
+                }
+            },{
+                xtype: 'button',
+                text: 'Revert',
+                formBind: true,
+                margin: '5',
+                listeners: {
+                    click: 'revertChanges'
+                }
+            },{
+                xtype: 'button',
+                text: 'Submit',
+                formBind: true,
+                margin: '5',
+                listeners: {
+                    click: 'submitOperations'
+                }
+            }
+        ]
+    },
 
     store: {
         type: 'personnel'

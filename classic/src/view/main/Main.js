@@ -8,7 +8,7 @@
 Ext.define('SenchaPro.view.main.Main', {
     extend: 'Ext.tab.Panel',
     xtype: 'app-main',
-
+    reference: 'maintabpanel',
     requires: [
         'Ext.plugin.Viewport',
         'Ext.window.MessageBox',
@@ -83,6 +83,7 @@ Ext.define('SenchaPro.view.main.Main', {
             xtype: 'maincontainer',
             items:[{
                 xtype:'mainlist',
+                itemId: 'mainlist',
                 region: 'center',
                 margin: '0 5 0 0'
             },{

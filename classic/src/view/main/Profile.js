@@ -8,12 +8,16 @@ Ext.define('SenchaPro.view.main.Profile', {
         'Ext.button.Button',
         'Ext.form.FieldSet',
         'Ext.form.field.ComboBox',
+        'Ext.layout.container.HBox',
         'Ext.layout.container.VBox',
         'SenchaPro.store.Gender'
     ],
     reference: 'profile',
     layout:{type:'vbox',align: 'middle'},
     title: "Profile",
+    scrollable: true,
+    bodyPadding: '0 0 40 0',
+
 
     items: [
         {
@@ -85,11 +89,23 @@ Ext.define('SenchaPro.view.main.Profile', {
                     name: 'country'
                 }
             ]
-        },{
-            xtype: 'button',
-            text:'Save',
-            formBind: true,
-            margin: '5 0 0 0',
+        }, {
+            xtype: 'panel',
+            layout: {
+                    type: 'hbox',
+                    pack: 'left',
+                    align: 'begin'
+            },
+            items:[{
+                    xtype: 'button',
+                    text: 'Update',
+                    formBind: true,
+                    margin: '5',
+                    listeners:{
+                        click: 'updateUser'
+                    }
+                }
+            ]
         }
     ]
 });
